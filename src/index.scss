@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply bg-slate-900 text-white font-body;
+  }
+}
+
+@layer components {
+  .page-container {
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+  .btn {
+    @apply py-3 px-6 select-none text-white text-lg font-medium;
+    &-primary {
+      @apply bg-primary;
+    }
+    &-rounded {
+      @apply rounded-lg;
+    }
+  }
+  .movies-list {
+    .swiper-slide {
+      width: 300px;
+      height: auto;
+    }
+  }
+  .banner {
+    .swiper {
+      height: 100%;
+    }
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .selected {
+    @apply text-primary;
+  }
+}
